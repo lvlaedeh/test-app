@@ -1,11 +1,16 @@
 import React from 'react'
 import Wrapper from '../../hoc/Wrapper'
-import './Layout.css'
+import Navbar from '../Navigition/Navbar'
 
 const Layout = (props) => {
+    // const layoutStyle= {
+    //     marginTop : '6rem'
+    // style = { layoutStyle }
+    // }
     return (
         <Wrapper>
-            <main className="content"> {props.children} </main>
+            <Navbar/>
+            <main > {props.children} </main>
         </Wrapper>
     )
 }
