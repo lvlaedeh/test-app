@@ -1,5 +1,6 @@
-import React from 'react'
-import { Button , makeStyles, TextField } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Button, makeStyles, TextField } from '@material-ui/core'
+// import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
     account: {
@@ -28,47 +29,61 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Account =() => {
+const Account = () => {
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+        console.log(name, email, password)
+    }
 
     const classes = useStyles();
-        return(
-            <div className={classes.account}>
-                <h2>Account</h2>
-                <form className={classes.form}>
-                    <TextField
-                        className={classes.textField}
-                        id="outlined-number"
-                        label="Number"
-                        type="text"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="outlined"
-                    />
-                    <TextField
-                        className={classes.textField}
-                        id="outlined-number"
-                        label="Email"
-                        type="email"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="outlined"
-                    />
-                    <TextField
-                        className={classes.textField}
-                        id="outlined-number"
-                        label="Password"
-                        type="password"
-                        InputLabelProps={{
-                            shrink: true,
-                        }}
-                        variant="outlined"
-                    />
-                    <Button className={classes.button} variant="contained" >Submit</Button>
-                </form>
-            </div>
-        )
+    return (
+        <div className={classes.account} >
+            <h2>Account</h2>
+            <form className={classes.form} onSubmit={submitHandler}>
+                <TextField
+                    className={classes.textField}
+                    id="outlined-name"
+                    label="Name"
+                    type="text"
+                    value={name}
+                    onChange={(event) => setname(event.target.value)}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                />
+                <TextField
+                    className={classes.textField}
+                    id="outlined-email"
+                    label="Email"
+                    type="email"
+                    value={email}
+                    onChange={(event) => setemail(event.target.value)}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                />
+                <TextField
+                    className={classes.textField}
+                    id="outlined-number"
+                    label="Password"
+                    type="password"
+                    value={password}
+                    onChange={(event) => setpassword(event.target.value)}
+                    InputLabelProps={{
+                        shrink: true,
+                    }}
+                    variant="outlined"
+                />
+                <Button className={classes.button} variant="contained" type="submit">Submit</Button>
+            </form>
+        </div>
+    )
 }
 
 export default Account
