@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+/* .navitem li{
+    height: 100%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    box-sizing: border-box;
+} */
+
 .navitem a{
     color: #fff;
     height: 100%;

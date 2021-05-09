@@ -5,8 +5,8 @@ import './Navitem.css'
 const Navitem = () =>{
     return(
         <ul className="navitem">
-            <li><Link to='/'>Home</Link> </li>
-            <li><Link to='/table'>Table</Link> </li>
+            <li><Link to="/">Home</Link> </li>
+            <li><Link to="/table">Table</Link> </li>
         </ul>
     )
 }

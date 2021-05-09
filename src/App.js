@@ -1,5 +1,6 @@
 import React from 'react'
-import {BrowserRouter as Router , Route} from 'react-router-dom'
+import {BrowserRouter as Router , Route, Switch} from 'react-router-dom'
+import Account from './component/Account/Account'
 import Layout from './component/layout/layout'
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
     <div>
       <Router>
         <Layout>
-         
+         <Switch>
+            <Route path="/" exact component={Account}/>
+         </Switch>
         </Layout>
       </Router>
     </div>
