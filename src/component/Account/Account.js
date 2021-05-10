@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Button, makeStyles, TextField } from '@material-ui/core'
-// import axios from 'axios';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
     account: {
         display: 'flex',
         flexFlow: 'column',
@@ -27,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
         width: '10px',
         margin: '5px auto',
     },
-}));
+});
 
 const Account = () => {
     const [name, setname] = useState('')
