@@ -7,6 +7,7 @@ const Navitem = () =>{
         <ul className="navitem">
             <li><Link to="/">Home</Link> </li>
             <li><Link to="/table">Table</Link> </li>
+            <li><Link to="/list">To Do</Link> </li>
         </ul>
     )
 }

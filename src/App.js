@@ -1,8 +1,9 @@
 import React from 'react'
 import {BrowserRouter as Router , Route, Switch} from 'react-router-dom'
-import Account from './component/Account/Account'
+import Account from './pages/Account/Account'
 import Layout from './component/layout/layout'
-import Table from './component/Table/Table'
+import Table from './pages/Table/Table'
+import ToDo from './pages/ToDo/ToDo'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
          <Switch>
             <Route path="/" exact component={Account}/>
             <Route path="/table" component={Table}/>
+            <Route path="/list" component={ToDo} />
          </Switch>
         </Layout>
       </Router>
