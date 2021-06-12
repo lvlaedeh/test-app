@@ -1,7 +1,11 @@
-import { makeStyles } from '@material-ui/core';
-import React from 'react'
+import { makeStyles} from '@material-ui/core';
+import PlansFrom from '../../component/Plans/PlansFrom'
+import React, { useState } from 'react'
+import PlansList from '../../component/Plans/PlansList';
 
 const ToDo = () => {
+
+    const [toDo,setToDo] = useState([])
 
     const useStyles = makeStyles({
     main: {
@@ -18,9 +22,22 @@ const ToDo = () => {
     },
 })
     const classes = useStyles();
+
+    const addPlanHandler = (item) =>{
+        setToDo((prevState)=>{
+            return[
+                ...prevState,{
+                    ...item
+                }
+            ]
+        })
+    }
+
     return (
         <div className={classes.main}>
             <h2>To Do List</h2>
+            <PlansFrom onAdd={addPlanHandler} />
+            <PlansList plans={toDo} />
         </div>
     )
 }
