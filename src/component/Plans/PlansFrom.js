@@ -8,13 +8,11 @@ const PlansFrom = (props) => {
             display : 'flex',
             margin : '20px 0' ,
         },
-        // textField : {
-        //     margin
-        // }
     })
 
     const submitHandler = (event) =>{
         event.preventDefault()
+        setTitle('')
         props.onAdd({title : title})
     }
     const classes = useStyles()
