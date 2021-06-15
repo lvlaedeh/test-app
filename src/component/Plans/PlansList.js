@@ -13,7 +13,7 @@ const PlansList = (props) => {
             ]
         })
     }
-
+    
     return (
         <div style={{display: 'flex'}} className="plan-list">
             <ul>

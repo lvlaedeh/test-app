@@ -8,6 +8,7 @@ const Navitem = () =>{
             <li><Link to="/">Home</Link> </li>
             <li><Link to="/table">Table</Link> </li>
             <li><Link to="/list">To Do</Link> </li>
+            <li><Link to="/ToDolist">To Do List</Link> </li>
         </ul>
     )
 }

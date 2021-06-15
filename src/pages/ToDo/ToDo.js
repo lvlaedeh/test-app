@@ -34,13 +34,12 @@ const ToDo = () => {
     }
 
     const deleteItemHandler = (id) => {
-        setToDo((prevState) => {
+        setToDo(() => {
             const newList = toDo.filter((i)=> i.title !== id.title )
             return  newList  
         })
-        console.log(id)
     }
-
+    
     return (
         <div className={classes.main}>
             <h2>To Do List</h2>
